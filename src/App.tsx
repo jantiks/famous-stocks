@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Home from './comp/Home';
+import SenateListing from './comp/Home';
+import Hero  from './comp/Hero';
 import { ThemeProvider } from "./@/components/ui/theme-provider"
 
 function App() {
@@ -10,10 +11,10 @@ function App() {
             attribute="class"
             defaultTheme="dark"
             enableSystem
-            disableTransitionOnChange
-          >
-            <Home />
-          </ThemeProvider>
+            disableTransitionOnChange>
+            <Hero />
+            <SenateListing />
+      </ThemeProvider>
     </div>
   );
 }

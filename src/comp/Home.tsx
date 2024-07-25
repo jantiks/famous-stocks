@@ -1,15 +1,13 @@
-// src/components/Home.tsx
 import React from 'react';
 import SenatorTable from './SentaorTable';
-import { mockSenators } from '../interfaces/Senator';
+import { mockTransactions } from '../interfaces/Senator';
 
-const Home: React.FC = () => {
+const SenateListing: React.FC = () => {
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Senator Trading Dashboard</h1>
-      <SenatorTable senators={mockSenators} />
+    <div className='contaier'>
+      <SenatorTable transactions={mockTransactions} />
     </div>
   );
 };
 
-export default Home;
+export default SenateListing;
