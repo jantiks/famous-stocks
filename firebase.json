@@ -43,7 +43,7 @@
       "port": 9000
     },
     "hosting": {
-      "port": 5000
+      "port": 5050
     },
     "pubsub": {
       "port": 8085
@@ -58,5 +58,8 @@
       "enabled": true
     },
     "singleProjectMode": true
+  },
+  "storage": {
+    "rules": "storage.rules"
   }
 }

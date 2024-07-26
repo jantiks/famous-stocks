@@ -38,10 +38,10 @@ const SenatorTable: React.FC<TransactionTableProps> = ({ transactions }) => {
               <div className="font-medium">{transaction.stockTicker}</div>
               <div className="font-medium">{transaction.stock}</div>
             </TableCell>
-            <TableCell>{transaction.politician.name}</TableCell>
+            <TableCell>{transaction.politician.firstName} {transaction.politician.lastName}</TableCell>
             <TableCell>
               <div>{transaction.action}</div>
-              <div>{transaction.lowerAmount} - {transaction.upperAmount} {transaction.currency}</div>
+              <div>{transaction.amount}</div>
             </TableCell>
             <TableCell>{transaction.traded.toLocaleDateString("en-US")}</TableCell>
             <TableCell>{transaction.filed.toLocaleDateString("en-US")}</TableCell>
