@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import SenateListing from './comp/Home';
+import SenateListing from './comp/SenateListing';
 import Hero  from './comp/Hero';
 import { ThemeProvider } from "./@/components/ui/theme-provider"
 
