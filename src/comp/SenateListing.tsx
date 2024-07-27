@@ -79,8 +79,8 @@ const SenateListing: React.FC = () => {
 
   return (
     <div className='container'>
-      <div className='flex space-x-5'>
-        <div className="mb-10 flex space-x-5 w-96">
+      <div className='flex flex-col mb-10 sm:space-x-5  sm:flex-row'>
+        <div className="mb-10 flex flex-col space-y-5 sm:mb-0 sm:space-x-5 sm:w-96 sm:flex-row sm:space-y-0">
           <Input
             type='text'
             placeholder='Ticker'
