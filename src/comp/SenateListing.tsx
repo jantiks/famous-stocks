@@ -15,13 +15,10 @@ const SenateListing: React.FC = () => {
     console.log("ASD USEEFFECT")
       try {
         const result = await getTransactions();
-        console.log("ASD RESULT");
         const data: Transaction[] = result.data as Transaction[];
-        console.log("ASD DATA", data)
         setTransactions(data);
       } catch (error) {
         console.log("ASD ERROR FETCH", error);
-        console.error('Error fetching transactions:', error);
       } finally {
         setLoading(false);
       }
@@ -31,7 +28,7 @@ const SenateListing: React.FC = () => {
   }, []);
 
   return (
-    <div className='contaier'>
+    <div className='container'>
       <SenatorTable transactions={transactions} />
     </div>
   );
