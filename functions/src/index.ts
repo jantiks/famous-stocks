@@ -21,17 +21,9 @@ admin.initializeApp();
 
 exports.getTransactions = onRequest({cors: true},
   async (req, res) => {
-  //   res.set('Access-Control-Allow-Origin', '*');
-    // res.set('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    // res.set('Access-Control-Allow-Headers', 'Content-Type');
-
-    // if (req.method === 'OPTIONS') {
-    //   res.status(204).send('');
-    //   return;
-    // }
-
     cors()(req, res, async () => {
       try {
+        const {firstName, lastName, ticker} = req.body.data;
         const bucket = admin.storage().bucket();
         const file = bucket.file("trades_20240726.json");
         const [contents] = await file.download();
@@ -63,7 +55,27 @@ exports.getTransactions = onRequest({cors: true},
           },
         }));
 
-        res.status(200).json({data: transactions});
+        let filteredTransactions = transactions;
+
+        if (firstName && (firstName as string).length > 0) {
+          filteredTransactions = filteredTransactions.filter( (transaction: any) =>
+            transaction.politician.firstName.toLowerCase() === (firstName as string).toLowerCase()
+          );
+        }
+
+        if (lastName && (lastName as string).length > 0) {
+          filteredTransactions = filteredTransactions.filter( (transaction: any) =>
+            transaction.politician.lastName.toLowerCase() === (lastName as string).toLowerCase()
+          );
+        }
+
+        if (ticker && (ticker as string).length > 0) {
+          filteredTransactions = filteredTransactions.filter((transaction: any) => {
+            return transaction.stockTicker.toLowerCase() === (ticker as string).toLowerCase();
+          });
+        }
+
+        res.status(200).json({data: filteredTransactions});
       } catch (error) {
         console.error("Error fetching or processing data:", error);
         res.status(500).send("Error fetching or processing data");
