@@ -43,7 +43,7 @@ const SenatorTable: React.FC<TransactionTableProps> = ({ transactions, onPolitic
                 </button>
               </TableCell>
               <TableCell>
-              <button className='border-2 border-transparent hover:border-blue-700 px-2 py-1 rounded' onClick={() => onPoliticianClick(transaction.politician)}>
+              <button className='text-left border-2 border-transparent hover:border-blue-700 px-2 py-1 rounded' onClick={() => onPoliticianClick(transaction.politician)}>
                 {transaction.politician.firstName} {transaction.politician.lastName}
               </button>
                 </TableCell>
