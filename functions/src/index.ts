@@ -59,19 +59,19 @@ exports.getTransactions = onRequest({cors: true},
 
         if (firstName && (firstName as string).length > 0) {
           filteredTransactions = filteredTransactions.filter( (transaction: any) =>
-            transaction.politician.firstName.toLowerCase() === (firstName as string).toLowerCase()
+            transaction.politician.firstName.toLowerCase().includes((firstName as string).toLowerCase())
           );
         }
 
         if (lastName && (lastName as string).length > 0) {
           filteredTransactions = filteredTransactions.filter( (transaction: any) =>
-            transaction.politician.lastName.toLowerCase() === (lastName as string).toLowerCase()
+            transaction.politician.lastName.toLowerCase().includes((lastName as string).toLowerCase())
           );
         }
 
         if (ticker && (ticker as string).length > 0) {
           filteredTransactions = filteredTransactions.filter((transaction: any) => {
-            return transaction.stockTicker.toLowerCase() === (ticker as string).toLowerCase();
+            return transaction.stockTicker.toLowerCase().includes((ticker as string).toLowerCase());
           });
         }
 
