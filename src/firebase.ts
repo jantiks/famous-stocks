@@ -34,5 +34,6 @@ const db = getFirestore(app);
 
 const functions = getFunctions();
 const getTransactions = httpsCallable(functions, 'getTransactions');
+const subscribeForNotifications = httpsCallable(functions, 'subscribeForNotifications');
 
-export { app, auth, db, getTransactions };
+export { app, auth, db, getTransactions, subscribeForNotifications };

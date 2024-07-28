@@ -15,6 +15,7 @@ import {v4 as uuidv4} from "uuid";
 import cors = require("cors");
 
 admin.initializeApp();
+const db = admin.firestore();
 
 // Start writing functions
 // https://firebase.google.com/docs/functions/typescript
@@ -82,3 +83,69 @@ exports.getTransactions = onRequest({cors: true},
       }
     });
   });
+
+  interface RequestBody {
+    data: {
+      firstName: string;
+      lastName: string;
+      email: string;
+    };
+  }
+
+  interface Politician {
+    firstName: string;
+    lastName: string;
+    createdAt: number;
+  }
+
+  interface UserData {
+    politicians: Politician[];
+  }
+
+exports.subscribeForNotifications = onRequest((req, res) => {
+  cors()(req, res, async () => {
+    try {
+      console.log(req.body.data);
+      const {firstName, lastName, email}: RequestBody["data"] = req.body.data;
+
+      if (!firstName || !lastName || !email) {
+        return res.status(400).json({error: "Missing required fields"});
+      }
+
+      const userRef = db.collection("subscriptions").doc(email);
+      const userDoc = await userRef.get();
+
+      const politicianData: Politician = {
+        firstName,
+        lastName,
+        createdAt: Date.now(),
+      };
+
+      if (userDoc.exists) {
+        const userData = userDoc.data() as UserData;
+        const politicians = userData.politicians || [];
+
+        const isAlreadySubscribed = politicians.some(
+          (politician) => politician.firstName === firstName && politician.lastName === lastName
+        );
+
+        if (isAlreadySubscribed) {
+          return res.status(409).send(`You are already subscribed to ${firstName} ${lastName}`);
+        }
+        politicians.push(politicianData);
+        await userRef.update({
+          politicians: politicians,
+        });
+      } else {
+        await userRef.set({
+          politicians: [politicianData],
+        });
+      }
+
+      return res.status(200).json({data: {success: true}});
+    } catch (error) {
+      console.error("Error fetching or processing data:", error);
+      return res.status(500).send("Error fetching or processing data");
+    }
+  });
+});
