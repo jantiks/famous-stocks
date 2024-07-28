@@ -1,43 +1,47 @@
-export interface Senator {
-  name: string;
+
+
+export interface Politician {
+  firstName: string;
+  lastName: string;
   party: string;
   state: string;
-  totalGainLoss: number;
-  numberOfTrades: number;
-  topGainedStock: string;
-  topGainedAmount: number;
-  topLostStock: string;
-  topLostAmount: number;
-  totalInvestment: number;
-  ethicsViolations: number;
 }
 
-export const mockSenators: Senator[] = [
+export interface Transaction {
+  id: string;
+  stockTicker: string;
+  stock: string;
+  action: string;
+  amount: string;
+  currency: string;
+  traded: Date;
+  filed: Date;
+  politician: Politician
+}
+
+export const mockSenators: Politician[] = [
   {
-    name: 'John Doe',
+    firstName: 'John',
+    lastName: 'Doe',
     party: 'Democrat',
     state: 'California',
-    totalGainLoss: 250000,
-    numberOfTrades: 35,
-    topGainedStock: 'Apple Inc.',
-    topGainedAmount: 150000,
-    topLostStock: 'Tesla Inc.',
-    topLostAmount: 50000,
-    totalInvestment: 1200000,
-    ethicsViolations: 0,
   },
   {
-    name: 'Jane Smith',
+    firstName: 'Jane',
+    lastName: 'Smith',
     party: 'Republican',
     state: 'Texas',
-    totalGainLoss: 100000,
-    numberOfTrades: 20,
-    topGainedStock: 'Microsoft Corp.',
-    topGainedAmount: 80000,
-    topLostStock: 'Amazon Inc.',
-    topLostAmount: 30000,
-    totalInvestment: 900000,
-    ethicsViolations: 1,
   },
   // Add more mock data as needed
 ];
+
+export const mockTransactions: Transaction[] = []
+
+const rawTransactions = [
+  {"tx_date":"06/27/2024","file_date":"07/16/2024","last_name":"Whitehouse","first_name":"Sheldon","order_type":"Purchase","ticker":"GS","asset_name":"Goldman Sachs Group, Inc. (The) Common Stock","tx_amount":"$1,001 - $15,000","option_type":null,"strike_price":null,"expiry":null},
+  {"tx_date":"06/13/2024","file_date":"07/16/2024","last_name":"Whitehouse","first_name":"Sheldon","order_type":"Purchase","ticker":"HD","asset_name":"Home Depot","tx_amount":"$1,001 - $15,000","option_type":null,"strike_price":null,"expiry":null},
+  {"tx_date":"06/13/2024","file_date":"07/16/2024","last_name":"Whitehouse","first_name":"Sheldon","order_type":"Purchase","ticker":"MSFT","asset_name":"Microsoft Corp","tx_amount":"$1,001 - $15,000","option_type":null,"strike_price":null,"expiry":null}
+];
+
+
+console.log(mockSenators);
