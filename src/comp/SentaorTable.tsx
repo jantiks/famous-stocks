@@ -4,18 +4,17 @@ import {
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from '../@/components/ui/table';
+
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "../@/components/ui/dialog"
 import { Input } from "../@/components/ui/input"
@@ -77,7 +76,7 @@ const SenatorTable: React.FC<TransactionTableProps> = ({ transactions, onPolitic
                     stroke-width="2" 
                     stroke-linecap="round" 
                     stroke-linejoin="round" 
-                    className="lucide lucide-bell-ring hover:stroke-green-500 transition-colors duration-300">
+                    className="lucide lucide-bell-ring hover:stroke-yellow-200 transition-colors duration-300">
                       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
                       <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
                       <path d="M4 2C2.8 3.7 2 5.7 2 8"/>
@@ -108,11 +107,9 @@ const SenatorTable: React.FC<TransactionTableProps> = ({ transactions, onPolitic
   }
 
 
-
-  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   return (
     <Table className='bg-zinc-900 rounded-xl'>
-      <TableCaption className='py-8'>A list of recent senator trades.</TableCaption>
+      <TableCaption className='py-8'>{transactions.length > 0 ? "A list of recent senator trades" : "No recent trades available"}</TableCaption>
       <TableHeader>
         <TableRow className='text-gray-500'>
           <TableHead>Stock</TableHead>
@@ -124,17 +121,17 @@ const SenatorTable: React.FC<TransactionTableProps> = ({ transactions, onPolitic
       </TableHeader>
       <TableBody>
         {transactions.map((transaction) => {
-          const purchaseClass = transaction.action == "Purchase" ? "text-green-600" : "text-red-600"
+          const purchaseClass = transaction.action === "Purchase" ? "text-green-600" : "text-red-600"
           return (
             <TableRow className='text-left' key={transaction.id}>
               <TableCell>
-              <button className='text-left border-2 border-transparent hover:border-blue-700 px-2 py-1 rounded' onClick={() => onTickerClick(transaction.stockTicker)}>
+              <button className='text-left border-b-2 border-transparent transition duration-150 hover:border-yellow-500 px-2 py-1' onClick={() => onTickerClick(transaction.stockTicker)}>
                 <div className="font-medium">{transaction.stockTicker}</div>
-                <div className="font-light text-xs text-gray-500 max-w-52 truncate">{transaction.stock}</div>
+                <div className="font-light text-xs text-gray-500 max-w-52 truncate hidden sm:block">{transaction.stock}</div>
                 </button>
               </TableCell>
               <TableCell>
-              <button className='text-left border-2 border-transparent hover:border-blue-700 px-2 py-1 rounded' onClick={() => onPoliticianClick(transaction.politician)}>
+              <button className='text-left border-b-2 border-transparent transition duration-150 hover:border-yellow-500 px-2 py-1' onClick={() => onPoliticianClick(transaction.politician)}>
                 {transaction.politician.firstName} {transaction.politician.lastName}
               </button>
                 </TableCell>

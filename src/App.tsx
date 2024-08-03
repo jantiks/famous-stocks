@@ -4,6 +4,7 @@ import SenateListing from './comp/SenateListing';
 import Hero  from './comp/Hero';
 import { ThemeProvider } from "./@/components/ui/theme-provider"
 import { Toaster } from './@/components/ui/toaster';
+import { Navbar } from './comp/Navbar';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             defaultTheme="dark"
             enableSystem
             disableTransitionOnChange>
+            <Navbar />
             <Hero />
             <SenateListing />
             <Toaster />
