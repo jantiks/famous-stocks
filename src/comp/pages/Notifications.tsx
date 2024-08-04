@@ -23,6 +23,7 @@ import { useToast } from 'src/@/components/ui/use-toast';
 import { HiDotsHorizontal } from "react-icons/hi";
 import { deleteNotification } from 'src/firebase';
 import { LoadingSpinner } from 'src/@/components/ui/loadingSpinner';
+import { useAuth } from 'src/auth/authContext';
 
   interface DropdownMenuDemoProps {
     politician: Politician;
@@ -56,6 +57,7 @@ import { LoadingSpinner } from 'src/@/components/ui/loadingSpinner';
   export const Notifications = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [notifications, setNotifications] = useState<Politician[]>([]);
+    const { currentUser } = useAuth();
     const { toast } = useToast();
     const navigate = useNavigate();
   
@@ -93,7 +95,7 @@ import { LoadingSpinner } from 'src/@/components/ui/loadingSpinner';
       <div className="container">
         <h1 className="text-2xl m-8 font-bold lg:text-4xl lg:m-12">Keep track of your notifications</h1>
         <p className="text-sm m-8 text-center mx-auto sm:w-4/5 lg:w-2/4 lg:text-base lg:mb-12">
-          Whenever any of the politicians you subscribed for files a trade, we will send you an email on the following address.
+          Whenever any of the politicians you subscribed for files a trade, we will send you an email on the following address: {currentUser?.email}
         </p>
         <div className="md:px-14 relative">
             {isLoading && (
@@ -137,7 +139,7 @@ import { LoadingSpinner } from 'src/@/components/ui/loadingSpinner';
                 </div> : 
                 <div className="flex flex-col mx-auto max-w-lg p-4 items-center mt-36 border rounded-xl border-input bg-background">
                 <PiEmptyDuotone className="fill-red-300" size={70}></PiEmptyDuotone>
-                <p className="mt-4">
+                <p className="mt-4 pb-4">
                   You haven't subscribed for the notifications of any politician yet, you can do so in{" "}
                   <span className="underline cursor-pointer" onClick={() => navigate("/")}>
                     Insider Trades
