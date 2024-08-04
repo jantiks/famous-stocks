@@ -1,9 +1,9 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth, connectAuthEmulator } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getFunctions, httpsCallable } from "firebase/functions";
+import { signInWithPopup, GoogleAuthProvider, getAuth } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -44,4 +44,4 @@ const functions = getFunctions();
 const getTransactions = httpsCallable(functions, 'getTransactions');
 const subscribeForNotifications = httpsCallable(functions, 'subscribeForNotifications');
 
-export { app, auth, db, getTransactions, subscribeForNotifications };
+export { app, auth, db, getTransactions, subscribeForNotifications, signInWithPopup, GoogleAuthProvider };

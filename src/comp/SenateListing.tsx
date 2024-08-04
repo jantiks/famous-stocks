@@ -11,10 +11,9 @@ import { useToast } from 'src/@/components/ui/use-toast';
 
 const SenateListing: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [ticker, setTicker] = useState<string>('');
   const [politician, setPolitician] = useState<string>('');
-  const [open, setOpen] = useState(false);
   const { toast } = useToast()
 
   const fetchTransactions = async (firstName: string = "", lastName: string = "", ticker: string = "") => {
@@ -28,6 +27,7 @@ const SenateListing: React.FC = () => {
   };
 
   useEffect(() => {
+    setLoading(true)
     fetchTransactions()
       .then((transactions) => {
         setTransactions(transactions);
@@ -37,7 +37,6 @@ const SenateListing: React.FC = () => {
           variant: "destructive",
           title: `Error fetching transactions, please try again`
         })
-        setOpen(false)
       })
       .finally(() => {
         setLoading(false);
@@ -55,7 +54,6 @@ const SenateListing: React.FC = () => {
         variant: "destructive",
         title: `Error filtering transactions, please try again`
       })
-      setOpen(false)
     } finally {
       setLoading(false);
     }
@@ -71,7 +69,6 @@ const SenateListing: React.FC = () => {
         variant: "destructive",
         title: `Error filtering transactions, please try again`
       })
-      setOpen(false)
     } finally {
       setLoading(false);
     }
@@ -88,7 +85,6 @@ const SenateListing: React.FC = () => {
         variant: "destructive",
         title: `Error searching, please try again`
       })
-      setOpen(false)
     } finally {
       setLoading(false);
     }

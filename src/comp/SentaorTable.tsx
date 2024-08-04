@@ -16,6 +16,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTrigger,
+  DialogTitle
 } from "../@/components/ui/dialog"
 import { Input } from "../@/components/ui/input"
 import { Label } from "../@/components/ui/label"
@@ -73,9 +74,9 @@ const SenatorTable: React.FC<TransactionTableProps> = ({ transactions, onPolitic
                     viewBox="0 0 24 24" 
                     fill="none" 
                     stroke="currentColor" 
-                    stroke-width="2" 
-                    stroke-linecap="round" 
-                    stroke-linejoin="round" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
                     className="lucide lucide-bell-ring hover:stroke-yellow-200 transition-colors duration-300">
                       <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
                       <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
@@ -86,6 +87,9 @@ const SenatorTable: React.FC<TransactionTableProps> = ({ transactions, onPolitic
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px] bg-black">
           <DialogHeader>
+            <DialogTitle>
+              Subscribe for notification
+            </DialogTitle>
             <DialogDescription>
               Enter your email to subscribe for buy and sell actions of {politician.firstName} {politician.lastName}
             </DialogDescription>
