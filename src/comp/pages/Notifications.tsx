@@ -64,7 +64,7 @@ import { LoadingSpinner } from 'src/@/components/ui/loadingSpinner';
     };
   
     const fetchNotifications = async () => {
-      console.log("ASD FETCH NOTIFICATION");
+      setIsLoading(true);
       try {
         const response = await getNotifications();
         let notifications: Politician[] = (response.data as { notifications: Politician[] }).notifications;
@@ -74,6 +74,8 @@ import { LoadingSpinner } from 'src/@/components/ui/loadingSpinner';
           variant: "destructive",
           title: "Error fetching transactions, please try again",
         });
+      } finally {
+        setIsLoading(false);
       }
     };
   
@@ -129,16 +131,20 @@ import { LoadingSpinner } from 'src/@/components/ui/loadingSpinner';
               </TableBody>
             </Table>
           ) : (
-            <div className="flex flex-col mx-auto max-w-lg p-4 items-center mt-36 border rounded-xl border-input bg-background">
-              <PiEmptyDuotone className="fill-red-300" size={70}></PiEmptyDuotone>
-              <p className="mt-4">
-                You haven't subscribed for the notifications of any politician yet, you can do so in{" "}
-                <span className="underline cursor-pointer" onClick={() => navigate("/")}>
-                  Insider Trades
-                </span>{" "}
-                tab
-              </p>
-            </div>
+            isLoading ? 
+                <div className='absolute inset-0 flex items-center justify-center z-10 h-10'>
+                    <LoadingSpinner className='size-12 z-10'/>
+                </div> : 
+                <div className="flex flex-col mx-auto max-w-lg p-4 items-center mt-36 border rounded-xl border-input bg-background">
+                <PiEmptyDuotone className="fill-red-300" size={70}></PiEmptyDuotone>
+                <p className="mt-4">
+                  You haven't subscribed for the notifications of any politician yet, you can do so in{" "}
+                  <span className="underline cursor-pointer" onClick={() => navigate("/")}>
+                    Insider Trades
+                  </span>{" "}
+                  tab
+                </p>
+              </div>
           )}
         </div>
       </div>
