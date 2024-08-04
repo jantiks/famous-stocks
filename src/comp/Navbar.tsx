@@ -7,20 +7,24 @@ import { Dialog, DialogTrigger } from 'src/@/components/ui/dialog';
 import { SignInDialogContent } from './SignInDialogContent';
 import { SignOutDialogContent } from './SignOutDialogContent';
 import { useAuth } from 'src/auth/authContext';
-
-const defaultTab = "trades";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
-  const { userLoggedIn } = useAuth()
-  const [selectedTab, setSelectedTab] = useState(defaultTab);
+  const [openDialog, setOpenDialog] = useState(false);
+  const { userLoggedIn } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+
+  // Determine the selected tab based on the current route
+  const selectedTab = location.pathname.includes("/notifications")
+    ? "notifications"
+    : "trades";
 
   const reloadApp = () => {
-    window.location.href = "/";
-    window.location.reload();
-    setSelectedTab(defaultTab);
+    navigate("/");
   };
 
-  const isDesktop = useMediaQuery("(min-width: 768px)");
   const selectedClass = isDesktop ? "border-b-white" : "bg-white text-black";
 
   return (
@@ -32,61 +36,59 @@ export const Navbar: React.FC = () => {
           </button>
         </div>
         {isDesktop ? (
-          <>
-            <div className="flex space-x-4 font-medium">
+          <div className="flex space-x-4 font-medium">
+            <button
+              onClick={() => navigate("/")}
+              className={cn(
+                "border-b-2 border-transparent transition duration-150 hover:border-b-white",
+                selectedTab === "trades" ? selectedClass : ""
+              )}
+            >
+              Insider Trades
+            </button>
+            {userLoggedIn && (
               <button
-                onClick={() => setSelectedTab("trades")}
-                className={cn(
-                  "border-b-2 border-transparent transition duration-150 hover:border-b-white",
-                  selectedTab === "trades" ? selectedClass : ""
-                )}
-              >
-                Insider Trades
-              </button>
-              {userLoggedIn ? <>
-                <button
-                onClick={() => setSelectedTab("notifications")}
+                onClick={() => navigate("/notifications")}
                 className={cn(
                   "border-b-2 border-transparent transition duration-150 hover:border-b-white",
                   selectedTab === "notifications" ? selectedClass : ""
                 )}
               >
                 Notifications
-              </button></> : <></>}
-              <Dialog>
-                <DialogTrigger asChild>
-                    <button
-                    className={cn(
-                      "border-b-2 border-transparent transition duration-150 hover:border-b-white",
-                      selectedTab === "login" ? selectedClass : ""
-                    )}>
-                {userLoggedIn ? "Sign Out" : "Sign In"}
               </button>
-                      </DialogTrigger>
-                      {userLoggedIn ? <SignOutDialogContent /> : <SignInDialogContent />}
-                    </Dialog>
-            </div>
-          </>
+            )}
+            <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+              <DialogTrigger asChild>
+                <button className="border-b-2 border-transparent transition duration-150 hover:border-b-white">
+                  {userLoggedIn ? "Sign Out" : "Sign In"}
+                </button>
+              </DialogTrigger>
+              {userLoggedIn ? (
+                <SignOutDialogContent completion={() => {setOpenDialog(false)}}></SignOutDialogContent>
+              ) : (
+                <SignInDialogContent completion={() => {setOpenDialog(false)}}></SignInDialogContent>
+              )}
+            </Dialog>
+          </div>
         ) : (
-          <>
-            <Drawer direction="right">
-              <DrawerTrigger>
-                <MenuIcon />
-              </DrawerTrigger>
-              <DrawerContent className="bg-zinc-800 bg-opacity-60">
-                <div className="font-medium mt-12">
+          <Drawer direction="right">
+            <DrawerTrigger>
+              <MenuIcon />
+            </DrawerTrigger>
+            <DrawerContent className="bg-zinc-800 bg-opacity-60">
+              <div className="font-medium mt-12">
+                <button
+                  onClick={() => navigate("/")}
+                  className={cn(
+                    "block w-full p-2 text-center transition duration-150 hover:bg-white hover:text-black",
+                    selectedTab === "trades" ? selectedClass : ""
+                  )}
+                >
+                  Insider Trades
+                </button>
+                {userLoggedIn && (
                   <button
-                    onClick={() => setSelectedTab("trades")}
-                    className={cn(
-                      "block w-full p-2 text-center transition duration-150 hover:bg-white hover:text-black",
-                      selectedTab === "trades" ? selectedClass : ""
-                    )}
-                  >
-                    Insider Trades
-                  </button>
-                  {userLoggedIn ? <>
-                    <button
-                    onClick={() => setSelectedTab("notifications")}
+                    onClick={() => navigate("/notifications")}
                     className={cn(
                       "block w-full p-2 text-center transition duration-150 hover:bg-white hover:text-black",
                       selectedTab === "notifications" ? selectedClass : ""
@@ -94,23 +96,22 @@ export const Navbar: React.FC = () => {
                   >
                     Notifications
                   </button>
-                    
-                  </> : <></>}
-                  
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <button
-                          className="block w-full p-2 text-center transition duration-150 hover:bg-white hover:text-black"
-                        >
-                          {userLoggedIn ? "Sign Out" : "Sign In"}
-                        </button>
-                      </DialogTrigger>
-                      {userLoggedIn ? <SignOutDialogContent /> :<SignInDialogContent />}
-                    </Dialog>
-                </div>
-              </DrawerContent>
-            </Drawer>
-          </>
+                )}
+                <Dialog open={openDialog} onOpenChange={setOpenDialog}>
+                  <DialogTrigger asChild>
+                    <button className="block w-full p-2 text-center transition duration-150 hover:bg-white hover:text-black">
+                      {userLoggedIn ? "Sign Out" : "Sign In"}
+                    </button>
+                  </DialogTrigger>
+                  {userLoggedIn ? (
+                    <SignOutDialogContent completion={() => {setOpenDialog(false)}}></SignOutDialogContent>
+                  ) : (
+                    <SignInDialogContent completion={() => {setOpenDialog(false)}}></SignInDialogContent>
+                  )}
+                </Dialog>
+              </div>
+            </DrawerContent>
+          </Drawer>
         )}
       </div>
     </nav>

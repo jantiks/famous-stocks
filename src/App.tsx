@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import SenateListing from './comp/SenateListing';
-import Hero  from './comp/Hero';
 import { ThemeProvider } from "./@/components/ui/theme-provider"
-import { Toaster } from './@/components/ui/toaster';
 import { Navbar } from './comp/Navbar';
+import { Toaster } from './@/components/ui/toaster';
+import { Home } from './comp/pages/Home';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -15,8 +15,9 @@ function App() {
             enableSystem
             disableTransitionOnChange>
             <Navbar />
-            <Hero />
-            <SenateListing />
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
             <Toaster />
       </ThemeProvider>
     </div>

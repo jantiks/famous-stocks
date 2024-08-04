@@ -8,23 +8,26 @@ import {
 
 import { useToast } from 'src/@/components/ui/use-toast';
 import { auth, signInWithPopup, GoogleAuthProvider } from "src/firebase";
+import { useNavigate } from "react-router-dom";
 
 const provider = new GoogleAuthProvider();
+
+interface SignInProps {
+  completion?: () => void;
+}
   
   
-export const SignInDialogContent = () => {
+export const SignInDialogContent: React.FC<SignInProps> = ({ completion }) => {
+  const navigate = useNavigate();
   const { toast } = useToast()
 
   const handleGoogleLogin = () => { 
       signInWithPopup(auth, provider)
       .then((result) => {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        console.log("ASD CREDENTIAL LOGG INN", credential)
-        // The signed-in user info.
-        const user = result.user;
-        // IdP data available using getAdditionalUserInfo(result)
-        // ...
+        if (completion) {
+          completion();
+        }
+        navigate("/")
       }).catch((error) => {
         const errorMessage = error.message; 
         toast({

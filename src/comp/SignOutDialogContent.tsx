@@ -8,14 +8,21 @@ import {
   } from "../@/components/ui/dialog"
 import { Button } from "src/@/components/ui/button"
 import { auth } from "src/firebase"
+import { useNavigate } from "react-router-dom";
 
+interface SignOutProps {
+    completion?: () => void;
+}
 
-export const SignOutDialogContent = () => {
-
+export const SignOutDialogContent: React.FC<SignOutProps> = ({ completion }) => {
+    const navigate = useNavigate();
     const handleSignOut = () => {
         auth.signOut()
         .then(() => {
-            console.log("ASD HANDLE NAVIGATION")
+            if (completion) {
+                completion()
+            }
+            navigate("/")
         })
     }
 
