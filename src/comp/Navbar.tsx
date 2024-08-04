@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
     : "trades";
 
   const reloadApp = () => {
-    navigate("/");
+    navigate("/")
   };
 
   const selectedClass = isDesktop ? "border-b-white" : "bg-white text-black";
@@ -106,7 +106,10 @@ export const Navbar: React.FC = () => {
                   {userLoggedIn ? (
                     <SignOutDialogContent completion={() => {setOpenDialog(false)}}></SignOutDialogContent>
                   ) : (
-                    <SignInDialogContent completion={() => {setOpenDialog(false)}}></SignInDialogContent>
+                    <SignInDialogContent completion={() => {
+                      setOpenDialog(false)
+                      reloadApp();
+                    }}></SignInDialogContent>
                   )}
                 </Dialog>
               </div>

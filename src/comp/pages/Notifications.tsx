@@ -22,18 +22,20 @@ import { useEffect, useState } from 'react';
 import { useToast } from 'src/@/components/ui/use-toast';
 import { HiDotsHorizontal } from "react-icons/hi";
 import { deleteNotification } from 'src/firebase';
-
+import { LoadingSpinner } from 'src/@/components/ui/loadingSpinner';
 
   interface DropdownMenuDemoProps {
     politician: Politician;
-    onDelete: (politician: Politician) => void;
+    onStart: () => void;
+    onCompletion: (politician: Politician) => void;
   }
   
-  function DropdownMenuDemo({ politician, onDelete }: DropdownMenuDemoProps) {
+  function DropdownMenuDemo({ politician, onStart, onCompletion }: DropdownMenuDemoProps) {
     const deleteRequest = () => {
+        onStart()
       deleteNotification(politician)
         .finally(() => {
-          onDelete(politician);
+          onCompletion(politician);
         });
     };
   
@@ -52,6 +54,7 @@ import { deleteNotification } from 'src/firebase';
   }
   
   export const Notifications = () => {
+    const [isLoading, setIsLoading] = useState(false);
     const [notifications, setNotifications] = useState<Politician[]>([]);
     const { toast } = useToast();
     const navigate = useNavigate();
@@ -81,16 +84,21 @@ import { deleteNotification } from 'src/firebase';
     const handleDelete = (politician: Politician) => {
         const updatedNotifiations = notifications.filter((item) => !(item.firstName === politician.firstName && item.lastName === politician.lastName))
         setNotifications(updatedNotifiations)
+        setIsLoading(false);
     };
   
     return (
       <div className="container">
         <h1 className="text-2xl m-8 font-bold lg:text-4xl lg:m-12">Keep track of your notifications</h1>
-        <p className="w-4/5 text-sm m-8 text-center mx-auto lg:w-2/4 lg:text-base lg:mb-12">
+        <p className="text-sm m-8 text-center mx-auto sm:w-4/5 lg:w-2/4 lg:text-base lg:mb-12">
           Whenever any of the politicians you subscribed for files a trade, we will send you an email on the following address.
         </p>
-        <div className="container md:px-14">
-          {notifications.length > 0 ? (
+        <div className="md:px-14 relative">
+            {isLoading && (
+            <div className='absolute inset-0 flex items-center justify-center z-10 h-10'>
+                <LoadingSpinner className='size-12 z-10'/>
+            </div>)}
+            {notifications.length > 0 ? (
             <Table className="bg-zinc-900 rounded-xl max-w-lg mx-auto">
               <TableCaption className="py-8">"A list of your subscribed notifications"</TableCaption>
               <TableHeader>
@@ -114,7 +122,7 @@ import { deleteNotification } from 'src/firebase';
                       {/* <DropdownMenuDemo politician={politician} onDelete={handleDelete} /> */}
                     </TableCell>
                     <TableCell>
-                      <DropdownMenuDemo politician={politician} onDelete={handleDelete} />
+                      <DropdownMenuDemo politician={politician} onStart={() => {setIsLoading(true)}} onCompletion={handleDelete} />
                     </TableCell>
                   </TableRow>
                 ))}
