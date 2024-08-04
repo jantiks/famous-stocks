@@ -5,6 +5,7 @@ import { Navbar } from './comp/Navbar';
 import { Toaster } from './@/components/ui/toaster';
 import { Home } from './comp/pages/Home';
 import { Routes, Route } from 'react-router-dom';
+import { Notifications } from './comp/pages/Notifications';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/notifications" element={<Notifications />} />
             </Routes>
             <Toaster />
       </ThemeProvider>

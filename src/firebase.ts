@@ -43,5 +43,7 @@ const db = getFirestore(app);
 const functions = getFunctions();
 const getTransactions = httpsCallable(functions, 'getTransactions');
 const subscribeForNotifications = httpsCallable(functions, 'subscribeForNotifications');
+const getNotifications = httpsCallable(functions, 'getNotifications');
+const deleteNotification = httpsCallable(functions, "deleteNotification")
 
-export { app, auth, db, getTransactions, subscribeForNotifications, signInWithPopup, GoogleAuthProvider };
+export { app, auth, db, GoogleAuthProvider, getTransactions, subscribeForNotifications, signInWithPopup, getNotifications, deleteNotification };
