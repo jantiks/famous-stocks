@@ -15,7 +15,8 @@ There are 2 languages in the backend, and there 2 cloud functions folder.
 1. Typescript cloud functions: Located under `functions` folder
     It's responsible for all the client-server interaction of the app
 2. Python cloud functions: Located under `python-functions`
-    It's response for gathering stock trading data of the politiciants, there is a cron job runing everyday it's `main` function
+    It's response for gathering stock trading data of the politicians, there is a cron job running everyday it's `main` function
+    This module is heavily based on the following [repository](https://github.com/neelsomani/senator-filings), which parses the electronic filings at https://efdsearch.senate.gov/search/ and makes it json data.
 
 
 ## How to run the project locally
@@ -42,8 +43,6 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `yarn eject`
-
-### 
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
