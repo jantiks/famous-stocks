@@ -1,0 +1,5 @@
+tx_date,file_date,last_name,first_name,order_type,ticker,asset_name,tx_amount,option_type,strike_price,expiry
+07/24/2024,07/29/2024,Britt,Katie,Sale (Full),ONEW,OneWater Marine Inc. - Class A Common Stock,"$1,001 - $15,000",,,
+06/27/2024,07/16/2024,Whitehouse,Sheldon,Purchase,GS,"Goldman Sachs Group, Inc. (The) Common Stock","$1,001 - $15,000",,,
+06/13/2024,07/16/2024,Whitehouse,Sheldon,Purchase,HD,Home Depot,"$1,001 - $15,000",,,
+06/13/2024,07/16/2024,Whitehouse,Sheldon,Purchase,MSFT,Microsoft Corp,"$1,001 - $15,000",,,

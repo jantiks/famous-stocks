@@ -1,0 +1,1208 @@
+[debug] [2024-08-05T21:06:40.806Z] ----------------------------------------------------------------------
+[debug] [2024-08-05T21:06:40.808Z] Command:       /opt/homebrew/Cellar/node/22.4.0/bin/node /opt/homebrew/bin/firebase emulators:start --only functions
+[debug] [2024-08-05T21:06:40.808Z] CLI Version:   12.8.1
+[debug] [2024-08-05T21:06:40.809Z] Platform:      darwin
+[debug] [2024-08-05T21:06:40.809Z] Node Version:  v22.4.0
+[debug] [2024-08-05T21:06:40.809Z] Time:          Tue Aug 06 2024 01:06:40 GMT+0400 (Armenia Standard Time)
+[debug] [2024-08-05T21:06:40.809Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-05T21:06:40.864Z] Field ".functions" in "firebase.json" is possibly invalid: should be object
+[debug] [2024-08-05T21:06:40.864Z] Field ".functions[1].runtime" in "firebase.json" is possibly invalid: should be equal to one of the allowed values
+[debug] [2024-08-05T21:06:40.864Z] Field ".functions" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2024-08-05T21:06:40.868Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-05T21:06:40.868Z] > authorizing via signed-in user (tigran.arsenyan.2015@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-08-05T21:06:41.250Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-05T21:06:41.250Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-08-05T21:06:41.255Z] [hub] writing locator at /var/folders/sm/z5kfpmtd5pvd31nc2605hs0h0000gn/T/hub-famous-stocks.json
+[debug] [2024-08-05T21:06:41.507Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-05T21:06:41.507Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-05T21:06:41.507Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2024-08-05T21:06:41.509Z] defaultcredentials: writing to file /Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json
+[debug] [2024-08-05T21:06:41.512Z] Setting GAC to /Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json"}}
+[debug] [2024-08-05T21:06:41.513Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/famous-stocks/adminSdkConfig [none]
+[debug] [2024-08-05T21:06:42.461Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/famous-stocks/adminSdkConfig 200
+[debug] [2024-08-05T21:06:42.462Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/famous-stocks/adminSdkConfig {"projectId":"famous-stocks","storageBucket":"famous-stocks.appspot.com","locationId":"us-central"}
+[debug] [2024-08-05T21:06:42.484Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-08-05T21:06:42.484Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-08-05T21:06:42.484Z] Starting Emulator UI with command {"binary":"node","args":["/Users/tigran/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/tigran/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2024-08-05T21:06:42.579Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2024-08-05T21:06:42.579Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/tigran/Desktop/Classes/famous-stocks/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/tigran/Desktop/Classes/famous-stocks/functions\" for Cloud Functions..."}}
+[debug] [2024-08-05T21:06:42.747Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2024-08-05T21:06:43.146Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "eslint --ext .js,.ts .",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-import": "^2.25.4",
+    "firebase-functions-test": "^3.1.0",
+    "typescript": "^4.9.0"
+  },
+  "private": true
+}
+[debug] [2024-08-05T21:06:43.146Z] Building nodejs source
+[debug] [2024-08-05T21:06:43.146Z] Failed to find version of module node: reached end of search path /Users/tigran/Desktop/Classes/famous-stocks/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "22". Using node@22 from host. 
+[debug] [2024-08-05T21:06:43.147Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:06:43.151Z] Found firebase-functions binary at '/Users/tigran/Desktop/Classes/famous-stocks/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8007
+
+[debug] [2024-08-05T21:06:43.474Z] Got response from /__/functions.yaml {"endpoints":{"getNotifications":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"getNotifications"},"deleteNotification":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"deleteNotification"},"getTransactions":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"getTransactions"},"subscribeForNotifications":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"callableTrigger":{},"entryPoint":"subscribeForNotifications"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: getNotifications, deleteNotification, getTransactions, subscribeForNotifications. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: getNotifications, deleteNotification, getTransactions, subscribeForNotifications."}}
+[info] ✔  functions[us-central1-getNotifications]: http function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/getNotifications). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/getNotifications)."}}
+[info] ✔  functions[us-central1-deleteNotification]: http function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/deleteNotification). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/deleteNotification)."}}
+[info] ✔  functions[us-central1-getTransactions]: http function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/getTransactions). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/getTransactions)."}}
+[info] ✔  functions[us-central1-subscribeForNotifications]: http function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/subscribeForNotifications). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/subscribeForNotifications)."}}
+[info] i  functions: Watching "/Users/tigran/Desktop/Classes/famous-stocks/python-functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions\" for Cloud Functions..."}}
+[debug] [2024-08-05T21:06:48.490Z] Customer code is not Node
+[debug] [2024-08-05T21:06:48.490Z] Validating python source
+[debug] [2024-08-05T21:06:48.490Z] Building python source
+[debug] [2024-08-05T21:06:48.491Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:06:48.491Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:06:48.532Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:06:48.535Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:06:48.535Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+Press CTRL+C to quit
+
+[debug] [2024-08-05T21:06:49.960Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers"}}
+[error] 127.0.0.1 - - [05/Aug/2024 21:06:50] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:06:50.324Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:06:50] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51350 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[info] ✔  functions[us-central1-on_request_example]: http function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/on_request_example). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/famous-stocks/us-central1/on_request_example)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-08-05T21:06:50.963Z] Customer code is not Node
+[debug] [2024-08-05T21:06:50.963Z] Validating python source
+[debug] [2024-08-05T21:06:50.963Z] Building python source
+[debug] [2024-08-05T21:06:50.963Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:06:50.964Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:06:51.004Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:06:51.008Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:06:51.008Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:06:52] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:06:52.527Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:06:52] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51360 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:07:50.540Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers"}}
+[debug] [2024-08-05T21:07:51.544Z] Customer code is not Node
+[debug] [2024-08-05T21:07:51.545Z] Validating python source
+[debug] [2024-08-05T21:07:51.545Z] Building python source
+[debug] [2024-08-05T21:07:51.547Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:07:51.549Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:07:51.615Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:07:51.618Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:07:51.618Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[debug] [2024-08-05T21:07:53.093Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers"}}
+[error] 127.0.0.1 - - [05/Aug/2024 21:07:53] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:07:53.442Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:07:53] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51450 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:07:54.095Z] Customer code is not Node
+[debug] [2024-08-05T21:07:54.096Z] Validating python source
+[debug] [2024-08-05T21:07:54.096Z] Building python source
+[debug] [2024-08-05T21:07:54.096Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:07:54.098Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:07:54.147Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:07:54.150Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:07:54.150Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:07:55] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:07:55.680Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:07:55] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51457 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:08:31.555Z] [work-queue] {"queuedWork":["/famous-stocks/us-central1/on_request_example-2024-08-05T21:08:31.555Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-08-05T21:08:31.555Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/famous-stocks/us-central1/on_request_example-2024-08-05T21:08:31.555Z"],"workRunningCount":1}
+[debug] [2024-08-05T21:08:31.556Z] Accepted request GET /famous-stocks/us-central1/on_request_example --> us-central1-on_request_example
+[debug] [2024-08-05T21:08:31.558Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-08-05T21:08:31.558Z] [functions] Got req.url=/famous-stocks/us-central1/on_request_example, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/famous-stocks/us-central1/on_request_example, mapping to path=/"}}
+[debug] [2024-08-05T21:08:31.560Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","functions-framework"]
+[debug] [2024-08-05T21:08:31.560Z] [worker-pool] addWorker(us-central1-on_request_example) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-on_request_example)"}}
+[debug] [2024-08-05T21:08:31.561Z] [worker-pool] Adding worker with key us-central1-on_request_example, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-on_request_example, total=1"}}
+[info] >  [2024-08-05 21:08:32,476 INFO] Initializing client {"user":"[2024-08-05 21:08:32,476 INFO] Initializing client","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:32,476 INFO] Initializing client"}}
+[info] >  [2024-08-05 21:08:37,544 INFO] Getting rows starting at 0 {"user":"[2024-08-05 21:08:37,544 INFO] Getting rows starting at 0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:37,544 INFO] Getting rows starting at 0"}}
+[info] >  [2024-08-05 21:08:39,932 INFO] Getting rows starting at 100 {"user":"[2024-08-05 21:08:39,932 INFO] Getting rows starting at 100","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:39,932 INFO] Getting rows starting at 100"}}
+[info] >  [2024-08-05 21:08:42,367 INFO] Fetching report #0 {"user":"[2024-08-05 21:08:42,367 INFO] Fetching report #0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:42,367 INFO] Fetching report #0"}}
+[info] >  [2024-08-05 21:08:42,367 INFO] 0 transactions total {"user":"[2024-08-05 21:08:42,367 INFO] 0 transactions total","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:42,367 INFO] 0 transactions total"}}
+[info] >  [2024-08-05 21:08:49,648 ERROR] Exception on /__/health [GET] {"user":"[2024-08-05 21:08:49,648 ERROR] Exception on /__/health [GET]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:49,648 ERROR] Exception on /__/health [GET]"}}
+[info] >  Traceback (most recent call last): {"user":"Traceback (most recent call last):","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m Traceback (most recent call last):"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 1473, in wsgi_app","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 1473, in wsgi_app"}}
+[info] >      response = self.full_dispatch_request() {"user":"    response = self.full_dispatch_request()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     response = self.full_dispatch_request()"}}
+[info] >                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 882, in full_dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 882, in full_dispatch_request"}}
+[info] >      rv = self.handle_user_exception(e) {"user":"    rv = self.handle_user_exception(e)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     rv = self.handle_user_exception(e)"}}
+[info] >           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 880, in full_dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 880, in full_dispatch_request"}}
+[info] >      rv = self.dispatch_request() {"user":"    rv = self.dispatch_request()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     rv = self.dispatch_request()"}}
+[info] >           ^^^^^^^^^^^^^^^^^^^^^^^ {"user":"         ^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m          ^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 865, in dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 865, in dispatch_request"}}
+[info] >      return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return] {"user":"    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]"}}
+[info] >             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/execution_id.py", line 106, in wrapper {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/execution_id.py\", line 106, in wrapper","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/execution_id.py\", line 106, in wrapper"}}
+[info] >      return view_function(*args, **kwargs) {"user":"    return view_function(*args, **kwargs)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return view_function(*args, **kwargs)"}}
+[info] >             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/__init__.py", line 142, in view_func {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/__init__.py\", line 142, in view_func","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/__init__.py\", line 142, in view_func"}}
+[info] >      return function(request._get_current_object()) {"user":"    return function(request._get_current_object())","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return function(request._get_current_object())"}}
+[info] >             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/https_fn.py", line 439, in on_request_wrapped {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/https_fn.py\", line 439, in on_request_wrapped","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/https_fn.py\", line 439, in on_request_wrapped"}}
+[info] >      return func(request) {"user":"    return func(request)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return func(request)"}}
+[info] >             ^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py", line 246, in on_request_example {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 246, in on_request_example","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 246, in on_request_example"}}
+[info] >      run() {"user":"    run()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     run()"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py", line 242, in run {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 242, in run","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 242, in run"}}
+[info] >      senator_txs = main() {"user":"    senator_txs = main()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     senator_txs = main()"}}
+[info] >                    ^^^^^^ {"user":"                  ^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m                   ^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py", line 225, in main {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 225, in main","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 225, in main"}}
+[info] >      blob.download_to_filename(DESTINATION_FILE_PATH) {"user":"    blob.download_to_filename(DESTINATION_FILE_PATH)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     blob.download_to_filename(DESTINATION_FILE_PATH)"}}
+[info] >    File "/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 81, in inner {"user":"  File \"/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py\", line 81, in inner","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py\", line 81, in inner"}}
+[info] >      return func(*args, **kwds) {"user":"    return func(*args, **kwds)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return func(*args, **kwds)"}}
+[info] >             ^^^^^^^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 1345, in download_to_filename {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py\", line 1345, in download_to_filename","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py\", line 1345, in download_to_filename"}}
+[info] >      self._handle_filename_and_download( {"user":"    self._handle_filename_and_download(","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     self._handle_filename_and_download("}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 1219, in _handle_filename_and_download {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py\", line 1219, in _handle_filename_and_download","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py\", line 1219, in _handle_filename_and_download"}}
+[info] >      with open(filename, "wb") as file_obj: {"user":"    with open(filename, \"wb\") as file_obj:","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     with open(filename, \"wb\") as file_obj:"}}
+[info] >           ^^^^^^^^^^^^^^^^^^^^ {"user":"         ^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m          ^^^^^^^^^^^^^^^^^^^^"}}
+[info] >  FileNotFoundError: [Errno 2] No such file or directory: 'tmp/old_file.json' {"user":"FileNotFoundError: [Errno 2] No such file or directory: 'tmp/old_file.json'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m FileNotFoundError: [Errno 2] No such file or directory: 'tmp/old_file.json'"}}
+[debug] [2024-08-05T21:08:49.659Z] [worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: IDLE"}}
+[debug] [2024-08-05T21:08:49.659Z] [worker-pool] submitRequest(triggerId=us-central1-on_request_example) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-on_request_example)"}}
+[info] i  functions: Beginning execution of "us-central1-on_request_example" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Beginning execution of \"us-central1-on_request_example\""}}
+[debug] [2024-08-05T21:08:49.660Z] [worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: BUSY"}}
+[info] >  [2024-08-05 21:08:49,663 INFO] Initializing client {"user":"[2024-08-05 21:08:49,663 INFO] Initializing client","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:49,663 INFO] Initializing client"}}
+[info] >  [2024-08-05 21:08:54,622 INFO] Getting rows starting at 0 {"user":"[2024-08-05 21:08:54,622 INFO] Getting rows starting at 0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:54,622 INFO] Getting rows starting at 0"}}
+[info] >  [2024-08-05 21:08:57,006 INFO] Getting rows starting at 100 {"user":"[2024-08-05 21:08:57,006 INFO] Getting rows starting at 100","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:57,006 INFO] Getting rows starting at 100"}}
+[info] >  [2024-08-05 21:08:59,330 INFO] Fetching report #0 {"user":"[2024-08-05 21:08:59,330 INFO] Fetching report #0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:59,330 INFO] Fetching report #0"}}
+[info] >  [2024-08-05 21:08:59,330 INFO] 0 transactions total {"user":"[2024-08-05 21:08:59,330 INFO] 0 transactions total","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:08:59,330 INFO] 0 transactions total"}}
+[info] >  [2024-08-05 21:09:06,537 ERROR] Exception on / [GET] {"user":"[2024-08-05 21:09:06,537 ERROR] Exception on / [GET]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:09:06,537 ERROR] Exception on / [GET]"}}
+[info] >  Traceback (most recent call last): {"user":"Traceback (most recent call last):","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m Traceback (most recent call last):"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py", line 1473, in wsgi_app {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 1473, in wsgi_app","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 1473, in wsgi_app"}}
+[info] >      response = self.full_dispatch_request() {"user":"    response = self.full_dispatch_request()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     response = self.full_dispatch_request()"}}
+[info] >                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py", line 882, in full_dispatch_request {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 882, in full_dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 882, in full_dispatch_request"}}
+[info] >      rv = self.handle_user_exception(e) {"user":"    rv = self.handle_user_exception(e)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     rv = self.handle_user_exception(e)"}}
+[info] >           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py", line 880, in full_dispatch_request {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 880, in full_dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 880, in full_dispatch_request"}}
+[info] >      rv = self.dispatch_request() {"user":"    rv = self.dispatch_request()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     rv = self.dispatch_request()"}}
+[info] >           ^^^^^^^^^^^^^^^^^^^^^^^ {"user":"         ^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m          ^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py", line 865, in dispatch_request {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 865, in dispatch_request","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/flask/app.py\", line 865, in dispatch_request"}}
+[info] >      return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return] {"user":"    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]"}}
+[info] >             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/execution_id.py", line 106, in wrapper {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/execution_id.py\", line 106, in wrapper","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/execution_id.py\", line 106, in wrapper"}}
+[info] >      return view_function(*args, **kwargs) {"user":"    return view_function(*args, **kwargs)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return view_function(*args, **kwargs)"}}
+[info] >             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/__init__.py", line 142, in view_func {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/__init__.py\", line 142, in view_func","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/functions_framework/__init__.py\", line 142, in view_func"}}
+[info] >      return function(request._get_current_object()) {"user":"    return function(request._get_current_object())","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return function(request._get_current_object())"}}
+[info] >             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/https_fn.py", line 439, in on_request_wrapped {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/https_fn.py\", line 439, in on_request_wrapped","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/https_fn.py\", line 439, in on_request_wrapped"}}
+[info] >      return func(request) {"user":"    return func(request)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return func(request)"}}
+[info] >             ^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py", line 246, in on_request_example {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 246, in on_request_example","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 246, in on_request_example"}}
+[info] >      run() {"user":"    run()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     run()"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py", line 242, in run {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 242, in run","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 242, in run"}}
+[info] >      senator_txs = main() {"user":"    senator_txs = main()","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     senator_txs = main()"}}
+[info] >                    ^^^^^^ {"user":"                  ^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m                   ^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py", line 225, in main {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 225, in main","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py\", line 225, in main"}}
+[info] >      blob.download_to_filename(DESTINATION_FILE_PATH) {"user":"    blob.download_to_filename(DESTINATION_FILE_PATH)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     blob.download_to_filename(DESTINATION_FILE_PATH)"}}
+[info] >    File "/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py", line 81, in inner {"user":"  File \"/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py\", line 81, in inner","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/opt/homebrew/Cellar/python@3.11/3.11.9/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py\", line 81, in inner"}}
+[info] >      return func(*args, **kwds) {"user":"    return func(*args, **kwds)","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     return func(*args, **kwds)"}}
+[info] >             ^^^^^^^^^^^^^^^^^^^ {"user":"           ^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m            ^^^^^^^^^^^^^^^^^^^"}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 1345, in download_to_filename {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py\", line 1345, in download_to_filename","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py\", line 1345, in download_to_filename"}}
+[info] >      self._handle_filename_and_download( {"user":"    self._handle_filename_and_download(","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     self._handle_filename_and_download("}}
+[info] >    File "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py", line 1219, in _handle_filename_and_download {"user":"  File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py\", line 1219, in _handle_filename_and_download","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m   File \"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/google/cloud/storage/blob.py\", line 1219, in _handle_filename_and_download"}}
+[info] >      with open(filename, "wb") as file_obj: {"user":"    with open(filename, \"wb\") as file_obj:","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m     with open(filename, \"wb\") as file_obj:"}}
+[info] >           ^^^^^^^^^^^^^^^^^^^^ {"user":"         ^^^^^^^^^^^^^^^^^^^^","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m          ^^^^^^^^^^^^^^^^^^^^"}}
+[info] >  FileNotFoundError: [Errno 2] No such file or directory: 'tmp/old_file.json' {"user":"FileNotFoundError: [Errno 2] No such file or directory: 'tmp/old_file.json'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m FileNotFoundError: [Errno 2] No such file or directory: 'tmp/old_file.json'"}}
+[debug] [2024-08-05T21:09:06.546Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-on_request_example" in 16886.067ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finished \"us-central1-on_request_example\" in 16886.067ms"}}
+[debug] [2024-08-05T21:09:06.546Z] [worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: IDLE"}}
+[debug] [2024-08-05T21:09:06.547Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-08-05T21:09:06.547Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-08-05T21:09:06.547Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-08-05T21:10:58.987Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers"}}
+[debug] [2024-08-05T21:10:59.990Z] Customer code is not Node
+[debug] [2024-08-05T21:10:59.990Z] Validating python source
+[debug] [2024-08-05T21:10:59.990Z] Building python source
+[debug] [2024-08-05T21:10:59.991Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:10:59.993Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:11:00.052Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:11:00.057Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:11:00.057Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+Press CTRL+C to quit
+
+[debug] [2024-08-05T21:11:01.404Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers"}}
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:01] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:11:01.801Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:01] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51624 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:11:01.808Z] [worker-pool] Shutting down IDLE worker (us-central1-on_request_example) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-on_request_example)"}}
+[debug] [2024-08-05T21:11:01.808Z] [worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: FINISHING"}}
+[debug] [2024-08-05T21:11:01.808Z] [worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: exited"}}
+[debug] [2024-08-05T21:11:01.808Z] [worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bfee0241-0e65-435b-b0c3-6b237aff4add]: FINISHED"}}
+[debug] [2024-08-05T21:11:02.406Z] Customer code is not Node
+[debug] [2024-08-05T21:11:02.407Z] Validating python source
+[debug] [2024-08-05T21:11:02.407Z] Building python source
+[debug] [2024-08-05T21:11:02.409Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:11:02.411Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:11:02.455Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:11:02.459Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:11:02.459Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:03] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:11:03.988Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:03] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51631 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:11:11.210Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers"}}
+[debug] [2024-08-05T21:11:12.213Z] Customer code is not Node
+[debug] [2024-08-05T21:11:12.215Z] Validating python source
+[debug] [2024-08-05T21:11:12.215Z] Building python source
+[debug] [2024-08-05T21:11:12.216Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:11:12.218Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:11:12.264Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:11:12.267Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:11:12.267Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[debug] [2024-08-05T21:11:13.673Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers"}}
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:13] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:11:13.891Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:13] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51644 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:11:14.677Z] Customer code is not Node
+[debug] [2024-08-05T21:11:14.678Z] Validating python source
+[debug] [2024-08-05T21:11:14.678Z] Building python source
+[debug] [2024-08-05T21:11:14.680Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:11:14.682Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:11:14.724Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:11:14.726Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:11:14.727Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:16] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:11:16.231Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:16] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51655 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:11:26.310Z] [work-queue] {"queuedWork":["/famous-stocks/us-central1/on_request_example-2024-08-05T21:11:26.310Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-08-05T21:11:26.310Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/famous-stocks/us-central1/on_request_example-2024-08-05T21:11:26.310Z"],"workRunningCount":1}
+[debug] [2024-08-05T21:11:26.311Z] Accepted request GET /famous-stocks/us-central1/on_request_example --> us-central1-on_request_example
+[debug] [2024-08-05T21:11:26.314Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-08-05T21:11:26.314Z] [functions] Got req.url=/famous-stocks/us-central1/on_request_example, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/famous-stocks/us-central1/on_request_example, mapping to path=/"}}
+[debug] [2024-08-05T21:11:26.314Z] [worker-pool] Cleaned up workers for us-central1-on_request_example: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-on_request_example: 1 --> 0"}}
+[debug] [2024-08-05T21:11:26.316Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","functions-framework"]
+[debug] [2024-08-05T21:11:26.316Z] [worker-pool] addWorker(us-central1-on_request_example) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-on_request_example)"}}
+[debug] [2024-08-05T21:11:26.317Z] [worker-pool] Adding worker with key us-central1-on_request_example, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-on_request_example, total=1"}}
+[info] >  [2024-08-05 21:11:26,929 INFO] Initializing client {"user":"[2024-08-05 21:11:26,929 INFO] Initializing client","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:11:26,929 INFO] Initializing client"}}
+[info] >  [2024-08-05 21:11:32,195 INFO] Getting rows starting at 0 {"user":"[2024-08-05 21:11:32,195 INFO] Getting rows starting at 0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:11:32,195 INFO] Getting rows starting at 0"}}
+[info] >  [2024-08-05 21:11:34,531 INFO] Getting rows starting at 100 {"user":"[2024-08-05 21:11:34,531 INFO] Getting rows starting at 100","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:11:34,531 INFO] Getting rows starting at 100"}}
+[info] >  [2024-08-05 21:11:36,943 INFO] Fetching report #0 {"user":"[2024-08-05 21:11:36,943 INFO] Fetching report #0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:11:36,943 INFO] Fetching report #0"}}
+[info] >  [2024-08-05 21:11:36,944 INFO] 0 transactions total {"user":"[2024-08-05 21:11:36,944 INFO] 0 transactions total","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:11:36,944 INFO] 0 transactions total"}}
+[info] >  ASD DOWNLOAD TO  <Blob: famous-stocks.appspot.com, trades_20240726.json, 1722011344831740> {"user":"ASD DOWNLOAD TO  <Blob: famous-stocks.appspot.com, trades_20240726.json, 1722011344831740>","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m ASD DOWNLOAD TO  <Blob: famous-stocks.appspot.com, trades_20240726.json, 1722011344831740>"}}
+[debug] [2024-08-05T21:11:45.470Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/old_file.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/old_file.json changed, reloading triggers"}}
+[debug] [2024-08-05T21:11:46.471Z] Customer code is not Node
+[debug] [2024-08-05T21:11:46.472Z] Validating python source
+[debug] [2024-08-05T21:11:46.472Z] Building python source
+[debug] [2024-08-05T21:11:46.472Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:11:46.473Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:11:46.510Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:11:46.513Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:11:46.513Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[debug] [2024-08-05T21:11:46.784Z] [worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: IDLE"}}
+[debug] [2024-08-05T21:11:46.784Z] [worker-pool] submitRequest(triggerId=us-central1-on_request_example) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-on_request_example)"}}
+[info] i  functions: Beginning execution of "us-central1-on_request_example" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Beginning execution of \"us-central1-on_request_example\""}}
+[debug] [2024-08-05T21:11:46.784Z] [worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: BUSY"}}
+[info] >  [2024-08-05 21:11:46,786 INFO] Initializing client {"user":"[2024-08-05 21:11:46,786 INFO] Initializing client","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:11:46,786 INFO] Initializing client"}}
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[debug] [2024-08-05T21:11:46.878Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/output/trades_20240805.csv changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/output/trades_20240805.csv changed, reloading triggers"}}
+[debug] [2024-08-05T21:11:46.878Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/output/trades_20240805.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/output/trades_20240805.json changed, reloading triggers"}}
+[debug] [2024-08-05T21:11:47.880Z] Customer code is not Node
+[debug] [2024-08-05T21:11:47.881Z] Validating python source
+[debug] [2024-08-05T21:11:47.881Z] Building python source
+[debug] [2024-08-05T21:11:47.881Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:11:47.882Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:11:47.910Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:11:47.913Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8082"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:11:47.913Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8082
+Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:48] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:11:48.233Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:48] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51691 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:11:48.239Z] [worker-pool] Marking BUSY worker to finish (us-central1-on_request_example) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Marking BUSY worker to finish (us-central1-on_request_example)"}}
+[debug] [2024-08-05T21:11:48.239Z] [worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: FINISHING"}}
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:49] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:11:49.423Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:11:49] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51695 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[info] >  [2024-08-05 21:11:51,818 INFO] Getting rows starting at 0 {"user":"[2024-08-05 21:11:51,818 INFO] Getting rows starting at 0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:11:51,818 INFO] Getting rows starting at 0"}}
+[info] >  [2024-08-05 21:12:03,526 INFO] Getting rows starting at 100 {"user":"[2024-08-05 21:12:03,526 INFO] Getting rows starting at 100","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:12:03,526 INFO] Getting rows starting at 100"}}
+[info] >  [2024-08-05 21:12:05,840 INFO] Fetching report #0 {"user":"[2024-08-05 21:12:05,840 INFO] Fetching report #0","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:12:05,840 INFO] Fetching report #0"}}
+[info] >  [2024-08-05 21:12:05,841 INFO] 0 transactions total {"user":"[2024-08-05 21:12:05,841 INFO] 0 transactions total","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m [2024-08-05 21:12:05,841 INFO] 0 transactions total"}}
+[debug] [2024-08-05T21:12:13.048Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/old_file.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/old_file.json changed, reloading triggers"}}
+[info] >  ASD DOWNLOAD TO  <Blob: famous-stocks.appspot.com, trades_20240726.json, 1722892306630213> {"user":"ASD DOWNLOAD TO  <Blob: famous-stocks.appspot.com, trades_20240726.json, 1722892306630213>","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"\u001b[90m> \u001b[39m ASD DOWNLOAD TO  <Blob: famous-stocks.appspot.com, trades_20240726.json, 1722892306630213>"}}
+[debug] [2024-08-05T21:12:13.941Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/old_file.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/old_file.json changed, reloading triggers"}}
+[debug] [2024-08-05T21:12:13.942Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/new_file.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/new_file.json changed, reloading triggers"}}
+[debug] [2024-08-05T21:12:14.751Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-on_request_example" in 27967.682375ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finished \"us-central1-on_request_example\" in 27967.682375ms"}}
+[debug] [2024-08-05T21:12:14.752Z] [worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: IDLE --> FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: IDLE --> FINISHING"}}
+[debug] [2024-08-05T21:12:14.753Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-08-05T21:12:14.753Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-08-05T21:12:14.753Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-08-05T21:12:14.753Z] [worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: exited"}}
+[debug] [2024-08-05T21:12:14.753Z] [worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-on_request_example"},"extension":{},"message":"[worker-us-central1-on_request_example-bf6bed09-9cfd-454f-8e22-c21cf4e73e42]: FINISHED"}}
+[debug] [2024-08-05T21:12:14.854Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/output/trades_20240805.csv changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/output/trades_20240805.csv changed, reloading triggers"}}
+[debug] [2024-08-05T21:12:14.854Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/output/trades_20240805.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/output/trades_20240805.json changed, reloading triggers"}}
+[debug] [2024-08-05T21:12:15.855Z] Customer code is not Node
+[debug] [2024-08-05T21:12:15.856Z] Validating python source
+[debug] [2024-08-05T21:12:15.856Z] Building python source
+[debug] [2024-08-05T21:12:15.856Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:12:15.857Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:12:15.906Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:12:15.909Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:12:15.909Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:12:17] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:12:17.680Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:12:17] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 51738 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:17:05.883Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/new_file.json changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/tmp/new_file.json changed, reloading triggers"}}
+[debug] [2024-08-05T21:17:06.889Z] Customer code is not Node
+[debug] [2024-08-05T21:17:06.890Z] Validating python source
+[debug] [2024-08-05T21:17:06.890Z] Building python source
+[debug] [2024-08-05T21:17:06.892Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:17:06.893Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:17:06.954Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:17:06.957Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:17:06.957Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:17:08] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:17:08.838Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:17:08] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 52003 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:23:19.401Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers"}}
+[debug] [2024-08-05T21:23:20.408Z] Customer code is not Node
+[debug] [2024-08-05T21:23:20.409Z] Validating python source
+[debug] [2024-08-05T21:23:20.409Z] Building python source
+[debug] [2024-08-05T21:23:20.412Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:23:20.414Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:23:20.476Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:23:20.479Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:23:20.479Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[debug] [2024-08-05T21:23:21.874Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers"}}
+[error] 127.0.0.1 - - [05/Aug/2024 21:23:22] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:23:22.216Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:23:22] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 52377 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:23:22.876Z] Customer code is not Node
+[debug] [2024-08-05T21:23:22.876Z] Validating python source
+[debug] [2024-08-05T21:23:22.876Z] Building python source
+[debug] [2024-08-05T21:23:22.878Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:23:22.883Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:23:22.935Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:23:22.938Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:23:22.938Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:23:24] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:23:24.450Z] Got response from /__/functions.yaml endpoints:
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs: []
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:23:24] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 52391 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: on_request_example."}}
+[debug] [2024-08-05T21:34:35.869Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers"}}
+[debug] [2024-08-05T21:34:36.880Z] Customer code is not Node
+[debug] [2024-08-05T21:34:36.885Z] Validating python source
+[debug] [2024-08-05T21:34:36.885Z] Building python source
+[debug] [2024-08-05T21:34:36.887Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:34:36.891Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:34:36.957Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:34:36.961Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:34:36.961Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+Press CTRL+C to quit
+
+[debug] [2024-08-05T21:34:38.411Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers"}}
+[error] 127.0.0.1 - - [05/Aug/2024 21:34:38] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:34:38.684Z] Got response from /__/functions.yaml endpoints:
+  accountcleanup:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: accountcleanup
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    scheduleTrigger:
+      retryConfig: {}
+      schedule: every day 00:00
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs:
+- api: cloudscheduler.googleapis.com
+  reason: Needed for scheduled functions.
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:34:38] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 53049 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: accountcleanup, on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: accountcleanup, on_request_example."}}
+[info] i  functions[us-central1-accountcleanup]: function ignored because the pubsub emulator does not exist or is not running. {"metadata":{"emulator":{"name":"functions"},"message":"function ignored because the pubsub emulator does not exist or is not running."}}
+[debug] [2024-08-05T21:34:39.412Z] Customer code is not Node
+[debug] [2024-08-05T21:34:39.413Z] Validating python source
+[debug] [2024-08-05T21:34:39.413Z] Building python source
+[debug] [2024-08-05T21:34:39.413Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:34:39.414Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:34:39.461Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:34:39.464Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:34:39.464Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:34:40] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:34:40.968Z] Got response from /__/functions.yaml endpoints:
+  accountcleanup:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: accountcleanup
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    scheduleTrigger:
+      retryConfig: {}
+      schedule: every day 00:00
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs:
+- api: cloudscheduler.googleapis.com
+  reason: Needed for scheduled functions.
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:34:40] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 53061 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: accountcleanup, on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: accountcleanup, on_request_example."}}
+[debug] [2024-08-05T21:35:21.621Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers"}}
+[debug] [2024-08-05T21:35:22.624Z] Customer code is not Node
+[debug] [2024-08-05T21:35:22.624Z] Validating python source
+[debug] [2024-08-05T21:35:22.625Z] Building python source
+[debug] [2024-08-05T21:35:22.625Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:35:22.628Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:35:22.687Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:35:22.690Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:35:22.690Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+Press CTRL+C to quit
+
+[debug] [2024-08-05T21:35:23.024Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers"}}
+[error] 127.0.0.1 - - [05/Aug/2024 21:35:23] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:35:23.382Z] Got response from /__/functions.yaml endpoints:
+  accountcleanup:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: accountcleanup
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    scheduleTrigger:
+      retryConfig: {}
+      schedule: every day 00:00
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs:
+- api: cloudscheduler.googleapis.com
+  reason: Needed for scheduled functions.
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:35:23] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 53096 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: accountcleanup, on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: accountcleanup, on_request_example."}}
+[debug] [2024-08-05T21:35:24.025Z] Customer code is not Node
+[debug] [2024-08-05T21:35:24.025Z] Validating python source
+[debug] [2024-08-05T21:35:24.025Z] Building python source
+[debug] [2024-08-05T21:35:24.025Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-05T21:35:24.027Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-05T21:35:24.066Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-05T21:35:24.069Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-05T21:35:24.070Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:35:25] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-05T21:35:25.587Z] Got response from /__/functions.yaml endpoints:
+  accountcleanup:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: accountcleanup
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    scheduleTrigger:
+      retryConfig: {}
+      schedule: every day 00:00
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs:
+- api: cloudscheduler.googleapis.com
+  reason: Needed for scheduled functions.
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [05/Aug/2024 21:35:25] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1: 53102 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: accountcleanup, on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: accountcleanup, on_request_example."}}
+[debug] [2024-08-06T20:06:58.070Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/main.py changed, reloading triggers"}}
+[debug] [2024-08-06T20:06:59.105Z] Customer code is not Node
+[debug] [2024-08-06T20:06:59.106Z] Validating python source
+[debug] [2024-08-06T20:06:59.106Z] Building python source
+[debug] [2024-08-06T20:06:59.113Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-06T20:06:59.127Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-06T20:06:59.228Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-06T20:06:59.230Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-06T20:06:59.230Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[debug] [2024-08-06T20:06:59.842Z] File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/tigran/Desktop/Classes/famous-stocks/python-functions/__pycache__/main.cpython-311.pyc changed, reloading triggers"}}
+[error] 127.0.0.1 - - [06/Aug/2024 20:07:00] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-06T20:07:00.248Z] Got response from /__/functions.yaml endpoints:
+  accountcleanup:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: accountcleanup
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    scheduleTrigger:
+      retryConfig: {}
+      schedule: every day 00:00
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs:
+- api: cloudscheduler.googleapis.com
+  reason: Needed for scheduled functions.
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [06/Aug/2024 20:07:00] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1:  3144 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: accountcleanup, on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: accountcleanup, on_request_example."}}
+[debug] [2024-08-06T20:07:00.843Z] Customer code is not Node
+[debug] [2024-08-06T20:07:00.843Z] Validating python source
+[debug] [2024-08-06T20:07:00.843Z] Building python source
+[debug] [2024-08-06T20:07:00.844Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-06T20:07:00.844Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","-c","\"import firebase_functions; import os; print(os.path.dirname(firebase_functions.__file__))\""]
+[debug] [2024-08-06T20:07:00.878Z] stdout: /Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions
+
+[debug] [2024-08-06T20:07:00.880Z] Running admin server with args: ["python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""] and env: {"GCLOUD_PROJECT":"famous-stocks","K_REVISION":"1","PORT":"80","GOOGLE_CLOUD_QUOTA_PROJECT":"famous-stocks","FUNCTIONS_EMULATOR":"true","TZ":"UTC","FIREBASE_DEBUG_MODE":"true","FIREBASE_DEBUG_FEATURES":"{\"skipTokenVerification\":true,\"enableCors\":true}","FIREBASE_EMULATOR_HUB":"127.0.0.1:4400","CLOUD_EVENTARC_EMULATOR_HOST":"http://127.0.0.1:9299","FIREBASE_CONFIG":"{\"storageBucket\":\"famous-stocks.appspot.com\",\"projectId\":\"famous-stocks\"}","GOOGLE_APPLICATION_CREDENTIALS":"/Users/tigran/.config/firebase/tigran_arsenyan.2015_gmail.com_application_default_credentials.json","ADMIN_PORT":"8081"} in /Users/tigran/Desktop/Classes/famous-stocks/python-functions
+[debug] [2024-08-06T20:07:00.880Z] Running command with virtualenv: command=., args=["\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/bin/activate\"","&&","python3.11","\"/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py\""]
+[info]  * Serving Flask app 'serving'
+ * Debug mode: off
+
+[error] WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:8081
+
+[error] Press CTRL+C to quit
+
+[error] 127.0.0.1 - - [06/Aug/2024 20:07:01] "GET /__/functions.yaml HTTP/1.1" 200 -
+
+[debug] [2024-08-06T20:07:01.488Z] Got response from /__/functions.yaml endpoints:
+  accountcleanup:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: accountcleanup
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    scheduleTrigger:
+      retryConfig: {}
+      schedule: every day 00:00
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+  on_request_example:
+    availableMemoryMb: null
+    concurrency: null
+    entryPoint: on_request_example
+    httpsTrigger: {}
+    ingressSettings: null
+    labels: {}
+    maxInstances: null
+    minInstances: null
+    platform: gcfv2
+    secretEnvironmentVariables: []
+    serviceAccountEmail: null
+    timeoutSeconds: null
+params: []
+requiredAPIs:
+- api: cloudscheduler.googleapis.com
+  reason: Needed for scheduled functions.
+specVersion: v1alpha1
+
+[error] 127.0.0.1 - - [06/Aug/2024 20:07:01] "GET /__/quitquitquit HTTP/1.1" 200 -
+
+[error] /bin/sh: line 1:  3189 Terminated: 15          python3.11 "/Users/tigran/Desktop/Classes/famous-stocks/python-functions/venv/lib/python3.11/site-packages/firebase_functions/private/serving.py"
+
+[info] ✔  functions: Loaded functions definitions from source: accountcleanup, on_request_example. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: accountcleanup, on_request_example."}}
