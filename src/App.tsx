@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import SenateListing from './comp/SenateListing';
-import Hero  from './comp/Hero';
 import { ThemeProvider } from "./@/components/ui/theme-provider"
+import { Navbar } from './comp/Navbar';
 import { Toaster } from './@/components/ui/toaster';
+import { Home } from './comp/pages/Home';
+import { Routes, Route } from 'react-router-dom';
+import { Notifications } from './comp/pages/Notifications';
 
 function App() {
   return (
@@ -13,8 +15,11 @@ function App() {
             defaultTheme="dark"
             enableSystem
             disableTransitionOnChange>
-            <Hero />
-            <SenateListing />
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/notifications" element={<Notifications />} />
+            </Routes>
             <Toaster />
       </ThemeProvider>
     </div>

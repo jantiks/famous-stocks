@@ -6,13 +6,15 @@ import { getTransactions } from 'src/firebase';
 import { LoadingSpinner } from 'src/@/components/ui/loadingSpinner';
 import { Input } from 'src/@/components/ui/input';
 import { Button } from 'src/@/components/ui/button';
+import { useToast } from 'src/@/components/ui/use-toast';
 
 
 const SenateListing: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
   const [ticker, setTicker] = useState<string>('');
   const [politician, setPolitician] = useState<string>('');
+  const { toast } = useToast()
 
   const fetchTransactions = async (firstName: string = "", lastName: string = "", ticker: string = "") => {
     try {
@@ -20,18 +22,21 @@ const SenateListing: React.FC = () => {
       const data: Transaction[] = result.data as Transaction[];
       return data;
     } catch (error) {
-      console.log("ASD ERROR FETCH", error);
       throw error;
     }
   };
 
   useEffect(() => {
+    setLoading(true)
     fetchTransactions()
       .then((transactions) => {
         setTransactions(transactions);
       })
       .catch((error) => {
-        console.log("ASD ERROR", error);
+        toast({
+          variant: "destructive",
+          title: `Error fetching transactions, please try again`
+        })
       })
       .finally(() => {
         setLoading(false);
@@ -43,10 +48,12 @@ const SenateListing: React.FC = () => {
     try {
       setLoading(true);
       const transactions = await fetchTransactions(politician.firstName, politician.lastName);
-      console.log("ASD TRANSACTIONS", transactions)
       setTransactions(transactions);
     } catch (error) {
-      console.log("ASD ERROR", error);
+      toast({
+        variant: "destructive",
+        title: `Error filtering transactions, please try again`
+      })
     } finally {
       setLoading(false);
     }
@@ -58,7 +65,10 @@ const SenateListing: React.FC = () => {
       const transactions = await fetchTransactions("", "", ticker);
       setTransactions(transactions);
     } catch (error) {
-      console.log("ASD ERROR", error);
+      toast({
+        variant: "destructive",
+        title: `Error filtering transactions, please try again`
+      })
     } finally {
       setLoading(false);
     }
@@ -71,7 +81,10 @@ const SenateListing: React.FC = () => {
       const transactions = await fetchTransactions(firstName || "", lastName || "", ticker);
       setTransactions(transactions);
     } catch (error) {
-      console.log("ASD ERROR", error);
+      toast({
+        variant: "destructive",
+        title: `Error searching, please try again`
+      })
     } finally {
       setLoading(false);
     }

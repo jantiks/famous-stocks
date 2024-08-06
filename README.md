@@ -1,8 +1,25 @@
-# Getting Started with Create React App
+# Getting Started with the project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[The project is deployed here](https://famous-stocks.web.app/), it uses React+tailwind+shadcn for frondend and firebase cloud functions with typescript and python on server.
 
-## Available Scripts
+
+## Project structure
+
+### Frontend
+
+ALl the frontend code is under `src` folder, there under `comp` folder is all the components of the app, inside `firebase.ts` is done all communication with firebase and under `auth` folder is the code for Authentification
+
+### Backend
+
+There are 2 languages in the backend, and there 2 cloud functions folder.
+1. Typescript cloud functions: Located under `functions` folder
+    It's responsible for all the client-server interaction of the app
+2. Python cloud functions: Located under `python-functions`
+    It's response for gathering stock trading data of the politicians, there is a cron job running everyday it's `main` function
+    This module is heavily based on the following [repository](https://github.com/neelsomani/senator-filings), which parses the electronic filings at https://efdsearch.senate.gov/search/ and makes it json data.
+
+
+## How to run the project locally
 
 In the project directory, you can run:
 
@@ -14,12 +31,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
+### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -39,8 +52,16 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## To run the server locally
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You will need to install [Firebase CLI](https://firebase.google.com/docs/cli)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `firebase emulators:start`
+
+This will start all the emulators.
+
+### `ffirebase emulators:start --only functions`
+
+Starts only the firebase functions, this is the recommened way to test the functions, they can be hit by postman or any other tool for this purpose.
+
+
