@@ -56,7 +56,6 @@ exports.getTransactions = onRequest({cors: true},
           state: "",
         },
       }));
-
       let filteredTransactions = transactions;
 
       if (firstName && (firstName as string).length > 0) {

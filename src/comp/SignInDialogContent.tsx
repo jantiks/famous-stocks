@@ -18,7 +18,6 @@ interface SignInProps {
   
   
 export const SignInDialogContent: React.FC<SignInProps> = ({ completion }) => {
-  const navigate = useNavigate();
   const { toast } = useToast()
 
   const handleGoogleLogin = () => { 
@@ -27,7 +26,6 @@ export const SignInDialogContent: React.FC<SignInProps> = ({ completion }) => {
         if (completion) {
           completion();
         }
-        navigate("/")
       }).catch((error) => {
         const errorMessage = error.message; 
         toast({

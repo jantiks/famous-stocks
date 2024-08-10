@@ -1,13 +1,13 @@
 # Getting Started with the project
 
-[The project is deployed here](https://famous-stocks.web.app/), it uses React+tailwind+shadcn for frondend and firebase cloud functions with typescript and python on server.
+[The project is deployed here](https://famous-stocks.web.app/), it uses React+tailwind+shadcn for frontend and firebase cloud functions with typescript and python on server.
 
 
 ## Project structure
 
 ### Frontend
 
-ALl the frontend code is under `src` folder, there under `comp` folder is all the components of the app, inside `firebase.ts` is done all communication with firebase and under `auth` folder is the code for Authentification
+All the frontend code is under `src` folder, there under `comp` folder is all the components of the app, inside `firebase.ts` is done all communication with firebase and under `auth` folder is the code for Authentification
 
 ### Backend
 
@@ -62,6 +62,6 @@ This will start all the emulators.
 
 ### `ffirebase emulators:start --only functions`
 
-Starts only the firebase functions, this is the recommened way to test the functions, they can be hit by postman or any other tool for this purpose.
+Starts only the firebase functions, this is the recommeneded way to test the functions, they can be hit by postman or any other tool for this purpose.
 
 
