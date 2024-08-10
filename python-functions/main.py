@@ -3,7 +3,7 @@
 # Deploy with `firebase deploy`
 
 from firebase_functions import https_fn, scheduler_fn
-from firebase_admin import initialize_app, storage
+from firebase_admin import initialize_app, storage, firestore, auth
 import json
 from bs4 import BeautifulSoup
 import logging
@@ -18,6 +18,7 @@ import re
 # from senator-filings import run
 
 initialize_app()
+db = firestore.client()
 
 #
 #
@@ -106,8 +107,8 @@ def reports_api(
         'length': str(BATCH_SIZE),
         'report_types': '[11]',
         'filer_types': '[]',
-        'submitted_start_date': '07/14/2024 00:00:00',
-        'submitted_end_date': '',
+        'submitted_start_date': '07/14/2020 00:00:00',
+        'submitted_end_date': '01/14/2021 00:00:00',
         'candidate_state': '',
         'senator_state': '',
         'office_id': '',
@@ -198,6 +199,127 @@ def txs_for_report(client: requests.Session, row: List[str]) -> pd.DataFrame:
 
     return df
 
+def sendEmail(email, trades_df):
+    trades_df['politician'] = trades_df['first_name'] + ' ' + trades_df['last_name']
+    
+    trades_df = trades_df.rename(columns={
+        'tx_date': 'submitted',
+        'file_date': 'filed',
+        'order_type': 'Transaction'
+        'tx_amount': 'Amount'
+    })
+    
+    trades_df = trades_df.drop(columns=['first_name', 'last_name', 'asset_name'])
+    trades_df = trades_df.dropna(axis=1, how='all')
+    trades_html = trades_df.to_html(index=False, border=0, justify='center', classes='dataframe')
+    
+    html = f"""
+    <html>
+    <head>
+        <style>
+            .dataframe {{
+                font-family: Arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }}
+            .dataframe td, .dataframe th {{
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }}
+            .dataframe tr:nth-child(even){{background-color: #f2f2f2;}}
+            .dataframe tr:hover {{background-color: #ddd;}}
+            .dataframe th {{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                background-color: #4CAF50;
+                color: white;
+            }}
+        </style>
+    </head>
+    <body>
+        <p>Please find below the details of the matched trades:</p>
+        {trades_html}
+        <p>Best regards,<br>Insider stocks team</p>
+    </body>
+    </html>
+    """
+    
+    mail_ref = db.collection('mail')
+
+    # Create the email document
+    email_doc = {
+        'to': [email],
+        'message': {
+            'subject': "New trades happened",
+            'html': html,
+        }
+    }
+
+    # Add the document to the 'mail' collection
+    result = mail_ref.add(email_doc)
+    # Here you would normally send the email using an email-sending library like smtplib
+    # For demonstration purposes, we just print the HTML
+    print("EMAIL SENT, result:", result)
+
+
+def sendEmailIfNeeded(differences_df):
+    # Fetch all users from Firestore
+    # users_ref = firestore_client.collection('users')
+    # users = users_ref.stream()
+    if (differences_df.empty):
+        print("No differences to check")
+        return
+
+    users = db.collection('users').stream()
+
+    for user in users:
+        # user = auth.get_user(uid)
+        userFromDb = auth.get_user(user.id)
+        userEmail = userFromDb.email
+        if userEmail is None:
+            continue
+        userDict = user.to_dict()
+        notifications = userDict["notifications"]
+        if (notifications is None):
+            continue
+
+        allMatchedItems = pd.DataFrame()
+        for notification in notifications:
+            print("asd notification", notification)
+            firstName = notification["firstName"]
+            lastName = notification["lastName"]
+            matchedItems = differences_df[(differences_df['first_name'] == firstName) & (differences_df['last_name'] == lastName)]
+
+            if not matchedItems.empty:
+                allMatchedItems = pd.concat([allMatchedItems, matchedItems], ignore_index=True)
+            else:
+                print("ASD matches empty", userEmail)
+
+        if not allMatchedItems.empty:
+            sendEmail(userEmail, allMatchedItems)
+            allMatchedItems = []
+
+        # print("ASD USERDICT: ", user.to_dict())
+
+    # if (not isinstance(notification_tokens, dict) or len(notification_tokens) < 1):
+    #     print("There are no tokens to send notifications to.")
+    #     return
+    # print(f"There are {len(notification_tokens)} tokens to send notifications to.")
+
+    # for index, row in differences_df.iterrows():
+    #     politician_first_name = row['first_name']
+    #     politician_last_name = row['last_name']
+    #     for user in users:
+    #         user_data = user.to_dict()
+    #         notifications = user_data.get('notifications', [])
+    #         for notification in notifications:
+    #             if (notification.get('first_name') == politician_first_name and 
+    #                 notification.get('last_name') == politician_last_name):
+    #                 # Add your email sending logic here
+    #                 print(f"Sending email to {user_data['email']} for transaction: {row}")
+
+
 def main() -> pd.DataFrame:
     LOGGER.info('Initializing client')
     client = requests.Session()
@@ -225,13 +347,27 @@ def main() -> pd.DataFrame:
     blob.download_to_filename(DESTINATION_FILE_PATH)
     with open(DESTINATION_FILE_PATH, 'r') as f:
         json_data = json.load(f)
-    bucked_df = pd.DataFrame(json_data)
-    merged_df = pd.concat([all_txs, bucked_df]).drop_duplicates()
-    
+    bucket_df = pd.DataFrame(json_data)
+
+    differences_df = pd.merge(all_txs, bucket_df, how='left', indicator=True)
+    differences_df = differences_df[differences_df['_merge'] == 'left_only']
+    differences_df = differences_df.drop(columns=['_merge'])
+
+    sendEmailIfNeeded(differences_df)
+
+    # Combine the differences with the original bucket data
+    merged_df = pd.concat([differences_df, bucket_df]).drop_duplicates()
+
+    merged_df['tx_date_parsed'] = pd.to_datetime(merged_df['tx_date'])
+
+    merged_df = merged_df.sort_values(by='tx_date_parsed', ascending=False)
+
+    merged_df = merged_df.drop(columns=['tx_date_parsed'])
     merged_df.to_json(NEW_DESTINATION_FILE_PATH, orient='records')
+
     blob.upload_from_filename(NEW_DESTINATION_FILE_PATH)
-    all_txs.to_csv(f"{filename_base}.csv", index=False)
-    all_txs.to_json(f"{filename_base}.json", orient='records')
+    merged_df.to_csv(f"{filename_base}.csv", index=False)
+    merged_df.to_json(f"{filename_base}.json", orient='records')
 
     return all_txs
 
@@ -242,6 +378,7 @@ def run():
 
 @https_fn.on_request()
 def on_request_example(req: https_fn.Request) -> https_fn.Response:
+    # sendEmailIfNeeded([])
     run()
     return https_fn.Response("Hello world!")
 
