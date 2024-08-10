@@ -205,7 +205,7 @@ def sendEmail(email, trades_df):
     trades_df = trades_df.rename(columns={
         'tx_date': 'submitted',
         'file_date': 'filed',
-        'order_type': 'Transaction'
+        'order_type': 'Transaction',
         'tx_amount': 'Amount'
     })
     
