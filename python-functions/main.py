@@ -12,7 +12,7 @@ import pickle
 import requests
 import time
 from typing import Any, List, Optional
-from datetime import datetime
+from datetime import datetime, timedelta
 import os
 import re
 # from senator-filings import run
@@ -101,14 +101,22 @@ def reports_api(
     offset: int,
     token: str
 ) -> List[List[str]]:
+    
+    today = datetime.now()
+    two_days_ago = today - timedelta(days=2)
+
+    # Format dates as strings
+    submitted_start_date = two_days_ago.strftime('%m/%d/%Y %H:%M:%S')
+    submitted_end_date = today.strftime('%m/%d/%Y %H:%M:%S')
+
     """ Query the periodic transaction reports API. """
     login_data = {
         'start': str(offset),
         'length': str(BATCH_SIZE),
         'report_types': '[11]',
         'filer_types': '[]',
-        'submitted_start_date': '07/14/2020 00:00:00',
-        'submitted_end_date': '01/14/2021 00:00:00',
+        'submitted_start_date': submitted_start_date,
+        'submitted_end_date': submitted_end_date,
         'candidate_state': '',
         'senator_state': '',
         'office_id': '',
